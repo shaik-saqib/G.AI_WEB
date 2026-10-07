@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 860" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="43%" r="60%">
+      <stop offset="0%" stop-color="#111c38" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#090e1e" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#05070e" stop-opacity="1" />
+    </radialGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Stronger Glow Filter -->
+    <filter id="ringGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Cyan Arc Gradient -->
+    <linearGradient id="cyanArc" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#67e8f9" />
+    </linearGradient>
+
+    <!-- Purple Arc Gradient -->
+    <linearGradient id="purpleArc" x1="100%" y1="100%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <!-- Hand Skeleton Gradient -->
+    <linearGradient id="handBoneGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="60%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Background -->
+  <rect width="400" height="860" fill="url(#bgGlow)" />
+
+  <!-- Geometric Constellation Lines -->
+  <g stroke="#1e2e4a" stroke-width="0.8" opacity="0.45">
+    <line x1="40" y1="90" x2="150" y2="40" />
+    <line x1="150" y1="40" x2="330" y2="120" />
+    <line x1="330" y1="120" x2="380" y2="280" />
+    <line x1="40" y1="90" x2="90" y2="240" />
+    <line x1="90" y1="240" x2="140" y2="350" />
+    <line x1="380" y1="280" x2="360" y2="470" />
+    <line x1="140" y1="350" x2="30" y2="520" />
+    <line x1="30" y1="520" x2="110" y2="720" />
+    <line x1="110" y1="720" x2="90" y2="830" />
+    <line x1="360" y1="470" x2="280" y2="690" />
+    <line x1="280" y1="690" x2="350" y2="820" />
+    <line x1="110" y1="720" x2="280" y2="690" />
+    <line x1="90" y1="240" x2="330" y2="120" />
+    <line x1="140" y1="350" x2="360" y2="470" />
+
+    <!-- Constellation Joint Dots -->
+    <circle cx="40" cy="90" r="1.5" fill="#38bdf8" opacity="0.6" />
+    <circle cx="150" cy="40" r="1.5" fill="#38bdf8" opacity="0.6" />
+    <circle cx="330" cy="120" r="1.5" fill="#38bdf8" opacity="0.6" />
+    <circle cx="380" cy="280" r="1.5" fill="#38bdf8" opacity="0.6" />
+    <circle cx="90" cy="240" r="1.5" fill="#38bdf8" opacity="0.6" />
+    <circle cx="140" cy="350" r="1.5" fill="#38bdf8" opacity="0.6" />
+    <circle cx="360" cy="470" r="1.5" fill="#38bdf8" opacity="0.6" />
+    <circle cx="30" cy="520" r="1.5" fill="#38bdf8" opacity="0.6" />
+    <circle cx="110" cy="720" r="1.5" fill="#38bdf8" opacity="0.6" />
+    <circle cx="280" cy="690" r="1.5" fill="#38bdf8" opacity="0.6" />
+    <circle cx="90" cy="830" r="1.5" fill="#38bdf8" opacity="0.6" />
+    <circle cx="350" cy="820" r="1.5" fill="#38bdf8" opacity="0.6" />
+  </g>
+
+  <!-- Ambient Light Behind Emblem -->
+  <circle cx="200" cy="365" r="95" fill="#0284c7" opacity="0.08" filter="url(#ringGlow)" />
+  <circle cx="200" cy="365" r="75" fill="#4f46e5" opacity="0.1" filter="url(#ringGlow)" />
+
+  <!-- Center Emblem Outer Glowing Rings / Arcs -->
+  <!-- Top Cyan Arc -->
+  <path d="M 142 335 A 68 68 0 0 1 254 330" fill="none" stroke="url(#cyanArc)" stroke-width="3" stroke-linecap="round" filter="url(#ringGlow)" />
+  <!-- Bottom Purple Arc -->
+  <path d="M 258 395 A 68 68 0 0 1 170 425" fill="none" stroke="url(#purpleArc)" stroke-width="3" stroke-linecap="round" filter="url(#ringGlow)" />
+
+  <!-- Inner Dark Disc Container -->
+  <circle cx="200" cy="365" r="50" fill="#030611" stroke="#111c38" stroke-width="1.5" />
+
+  <!-- Hand Skeleton 21 Landmark Network -->
+  <g filter="url(#neonGlow)">
+    <!-- Palm connections (wrist to MCPs) -->
+    <!-- Wrist: (200, 395) -->
+    <!-- Thumb: 1(188, 386), 2(181, 375), 3(175, 366), 4(169, 360) -->
+    <!-- Index: 5(189, 355), 6(187, 343), 7(186, 334), 8(185, 325) -->
+    <!-- Middle: 9(200, 352), 10(200, 339), 11(200, 329), 12(200, 320) -->
+    <!-- Ring: 13(210, 355), 14(211, 344), 15(212, 335), 16(213, 327) -->
+    <!-- Pinky: 17(219, 360), 18(222, 350), 19(224, 342), 20(226, 334) -->
+
+    <!-- Palm Bones -->
+    <path d="M 200 395 L 188 386 M 200 395 L 189 355 M 200 395 L 200 352 M 200 395 L 210 355 M 200 395 L 219 360" 
+          stroke="url(#handBoneGrad)" stroke-width="1.6" stroke-linecap="round" opacity="0.85" />
+    <path d="M 188 386 L 189 355 L 200 352 L 210 355 L 219 360" 
+          stroke="url(#handBoneGrad)" stroke-width="1.4" stroke-linecap="round" opacity="0.75" />
+
+    <!-- Thumb Bones -->
+    <path d="M 188 386 L 181 375 L 175 366 L 169 360" 
+          stroke="url(#handBoneGrad)" stroke-width="1.6" stroke-linecap="round" />
+
+    <!-- Index Finger Bones -->
+    <path d="M 189 355 L 187 343 L 186 334 L 185 325" 
+          stroke="url(#handBoneGrad)" stroke-width="1.6" stroke-linecap="round" />
+
+    <!-- Middle Finger Bones -->
+    <path d="M 200 352 L 200 339 L 200 329 L 200 320" 
+          stroke="url(#handBoneGrad)" stroke-width="1.6" stroke-linecap="round" />
+
+    <!-- Ring Finger Bones -->
+    <path d="M 210 355 L 211 344 L 212 335 L 213 327" 
+          stroke="url(#handBoneGrad)" stroke-width="1.6" stroke-linecap="round" />
+
+    <!-- Pinky Finger Bones -->
+    <path d="M 219 360 L 222 350 L 224 342 L 226 334" 
+          stroke="url(#handBoneGrad)" stroke-width="1.6" stroke-linecap="round" />
+
+    <!-- Landmark Points (Glowing Dots) -->
+    <!-- Wrist -->
+    <circle cx="200" cy="395" r="2.4" fill="#38bdf8" />
+
+    <!-- Thumb -->
+    <circle cx="188" cy="386" r="2.2" fill="#38bdf8" />
+    <circle cx="181" cy="375" r="2.2" fill="#60a5fa" />
+    <circle cx="175" cy="366" r="2.2" fill="#818cf8" />
+    <circle cx="169" cy="360" r="2.4" fill="#c084fc" />
+
+    <!-- Index -->
+    <circle cx="189" cy="355" r="2.2" fill="#38bdf8" />
+    <circle cx="187" cy="343" r="2.2" fill="#60a5fa" />
+    <circle cx="186" cy="334" r="2.2" fill="#818cf8" />
+    <circle cx="185" cy="325" r="2.4" fill="#c084fc" />
+
+    <!-- Middle -->
+    <circle cx="200" cy="352" r="2.2" fill="#38bdf8" />
+    <circle cx="200" cy="339" r="2.2" fill="#60a5fa" />
+    <circle cx="200" cy="329" r="2.2" fill="#818cf8" />
+    <circle cx="200" cy="320" r="2.4" fill="#c084fc" />
+
+    <!-- Ring -->
+    <circle cx="210" cy="355" r="2.2" fill="#38bdf8" />
+    <circle cx="211" cy="344" r="2.2" fill="#60a5fa" />
+    <circle cx="212" cy="335" r="2.2" fill="#818cf8" />
+    <circle cx="213" cy="327" r="2.4" fill="#c084fc" />
+
+    <!-- Pinky -->
+    <circle cx="219" cy="360" r="2.2" fill="#38bdf8" />
+    <circle cx="222" cy="350" r="2.2" fill="#60a5fa" />
+    <circle cx="224" cy="342" r="2.2" fill="#818cf8" />
+    <circle cx="226" cy="334" r="2.4" fill="#c084fc" />
+  </g>
+
+  <!-- Title: GestureAI -->
+  <text x="200" y="492" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="0.5">
+    GestureAI
+  </text>
+
+  <!-- Tagline: Translates Signs, Connects Lives -->
+  <text x="200" y="524" text-anchor="middle" fill="#3b82f6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="600" letter-spacing="0.2">
+    Translates Signs, Connects Lives
+  </text>
+</svg>

@@ -1,0 +1,6 @@
+{
+  "name": "GestureAI",
+  "description": "Visual project showcase for GestureAI — Translates Signs, Connects Lives. An AI-powered Android application translating hand gestures into text, translation, and speech.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #030712;
+    color: #f3f4f6;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Subtle architectural grid pattern for technical depth without visual noise */
+.bg-cyber-grid {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle at 50% 15%, rgba(6, 182, 212, 0.08) 0%, rgba(59, 130, 246, 0.04) 30%, transparent 70%);
+}
+
+.glow-cyan {
+  box-shadow: 0 4px 20px -2px rgba(6, 182, 212, 0.15);
+}
+
+.glow-blue {
+  box-shadow: 0 4px 20px -2px rgba(59, 130, 246, 0.15);
+}
+
+.glow-purple {
+  box-shadow: 0 4px 20px -2px rgba(168, 85, 247, 0.15);
+}
+
+.glow-border-cyan {
+  border-color: rgba(6, 182, 212, 0.35);
+  box-shadow: 0 0 15px -3px rgba(6, 182, 212, 0.15);
+}
+
+.glow-border-subtle {
+  border-color: rgba(255, 255, 255, 0.08);
+  transition: all 0.25s ease;
+}
+
+.glow-border-subtle:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 4px 20px -4px rgba(6, 182, 212, 0.12);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+}
